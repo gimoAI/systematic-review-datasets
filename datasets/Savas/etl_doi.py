@@ -11,6 +11,8 @@ df.rename({'include': 'label_included', 'DOI': 'id'}, axis=1, inplace=True)
 
 # drop missing ids
 df.dropna(subset=["id"], inplace=True)
+
+# drop duplicate DOIs
 df.drop_duplicates(subset=['id'])
 
 # export
